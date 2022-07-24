@@ -10,7 +10,7 @@ puppeteer.use(StelthPlugin())
 const finishline = async function(){
     const browser = await puppeteer.launch({headless: false, slowMo: 50});
     const page = await browser.newPage();
-    //await page.setUserAgent('Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36')
+    await page.setUserAgent('Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36')
     await page.goto('https://www.finishline.com/store/_/N-/store/product/mens-nike-air-force-1-low-casual-shoes/prod795980?styleId=CW2288&colorId=111')
     //await page.waitForNavigation({waitUntil: 'networkidle2'})
     page.on('dialog', async dialog => {
